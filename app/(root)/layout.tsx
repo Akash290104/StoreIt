@@ -6,6 +6,8 @@ import { redirect } from "next/navigation";
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 
+export const dynamic = "force-dynamic";
+
 const layout = async ({ children }: { children: React.ReactNode }) => {
   const currentUser = await getCurrentUser();
 
@@ -13,8 +15,7 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
     return redirect("/sign-in");
   }
 
- console.log(currentUser.accountId);
- 
+  console.log(currentUser.accountId);
 
   return (
     <main className="flex h-screen">
