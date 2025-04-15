@@ -73,7 +73,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
   useEffect(() => {
     if (accountId) {
       // Ensure accountId is present
-      toast.success("Account created successfully. Enter the OTP to log in", {
+      toast.success("Enter the OTP to log in", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
